@@ -1,0 +1,48 @@
+<mvc:View controllerName="iddata.inputdataconverttable.controller.View1" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <headerContent>
+            <Button text="Display" type="Emphasized" press="submit" />
+        </headerContent>
+        <content>
+            <f:SimpleForm editable="true" layout="ResponsiveGridLayout" emptySpanL="8" emptySpanM="8" title="Employee deatails">
+                <f:content>
+                    <Label text="Employee Name" labelFor="Employee Name" design="Bold" />
+                    <Input id="Id1" placeholder="Enter your Name" />
+
+                    <Label text="Salary" labelFor="Salary" design="Bold" />
+                    <Input id="Id2" placeholder="Enter your salary" />
+
+                    <Label text="Location" labelFor="Location" design="Bold" />
+                    <Input id="Id3" placeholder="location" />
+                    </f:content>
+                </f:SimpleForm>
+            
+        
+
+        <Table id="display" inset="false" headerText="EMPLOYE DETAILS" items="{Data1>/}" visible="true">
+            <columns>
+                <Column>
+                    <Text text="Employe Name" />
+                </Column>
+                <Column>
+                    <Text text="Salary" />
+                </Column>
+
+                <Column>
+                    <Text text="Location" />
+                </Column>
+            </columns>
+
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{Data1>Name}" />
+                        <Text text="{Data1>Salary}" />
+                        <Text text="{Data1>Location}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        </content>
+    </Page>
+</mvc:View>
